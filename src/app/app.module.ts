@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { SliderComponent } from './slider/slider.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SliderComponent } from './slider/slider.component';
     FooterComponent,
     ContactComponent,
     AboutComponent,
-    SliderComponent
+    SliderComponent,
+    LoginComponent,
+    SignupComponent,
+    TestimonialComponent
   ],
   imports: [
     BrowserModule,
