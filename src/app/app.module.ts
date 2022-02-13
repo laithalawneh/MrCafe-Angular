@@ -12,6 +12,10 @@ import { SliderComponent } from './slider/slider.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { AdmindashbordComponent } from './admindashbord/admindashbord.component';
+import { UserdashbordComponent } from './userdashbord/userdashbord.component';
+import { CafedashbordComponent } from './cafedashbord/cafedashbord.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,11 +28,17 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     SliderComponent,
     LoginComponent,
     SignupComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    UserdashbordComponent,
+    AdmindashbordComponent,
+    AdmindashbordComponent,
+    UserdashbordComponent,
+    CafedashbordComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

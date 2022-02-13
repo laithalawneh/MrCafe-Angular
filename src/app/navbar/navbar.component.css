@@ -9,8 +9,8 @@
     background: #202a30d0;
     font-size: 15px;
     height: 40px;
-    padding: 0;
     color: rgba(255, 255, 255, 0.6);
+    
   }
   #topbar .contact-info a {
     line-height: 0;
@@ -70,7 +70,9 @@
   .scrolled-offset {
     margin-top: 70px;
   }
-  
+  h1{
+    color: #fff;
+  }
   /*--------------------------------------------------------------
   # Navigation Menu
   --------------------------------------------------------------*/

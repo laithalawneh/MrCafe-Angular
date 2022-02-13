@@ -8,14 +8,11 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  {path:'',component:AppComponent},
-  {path:'Home',component:HomeComponent},
-  {path:'About',component:AboutComponent},
-  {path:'Contact',component:ContactComponent},
-  {path:'Login',component:LoginComponent},
-  {path:'Signup',component:SignupComponent},
+  {path:'Home',loadChildren:()=>import('./module/homemodule/homemodule-routing.module').then(m=>m.HomemoduleRoutingModule)},
+  {path:'User',loadChildren:()=>import('./module/usermodule/usermodule-routing.module').then(m=>m.UsermoduleRoutingModule)},
+  {path:'Admin',loadChildren:()=>import('./module/adminmodule/adminmodule-routing.module').then(m=>m.AdminmoduleRoutingModule)},
+  {path:'Cafe',loadChildren:()=>import('./module/cafemodule/cafemodule-routing.module').then(m=>m.CafemoduleRoutingModule)}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
