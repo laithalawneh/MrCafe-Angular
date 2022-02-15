@@ -23,6 +23,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     AdmindashbordComponent,
     AdmindashbordComponent,
     UserdashbordComponent,
-    CafedashbordComponent
+    CafedashbordComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MatCardModule,
     MatTableModule,
     MatButtonModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    
 
   ],
   providers: [],
