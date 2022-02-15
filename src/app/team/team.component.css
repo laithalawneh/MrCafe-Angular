@@ -1,0 +1,57 @@
+@import url(../../assets/vendor/bootstrap-icons/bootstrap-icons.css);
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team{
+    background-color: white;
+    }
+
+    .row{
+      flex-wrap: nowrap;
+    }
+.container{
+  margin: 100;
+    }
+.team .member {
+  padding: 10px;
+  width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    background: #fff;
+  }
+  .team .member img {
+    max-width: 70%;
+    border-radius: 50%;
+    margin: 0 0 10px 0;
+  }
+  .team .member h4 {
+    font-weight: 300;
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+  .team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+  }
+  .team .member p {
+    padding-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: #d6d6d6;
+  }
+  .team .member .social {
+    margin-top: 15px;
+  }
+  .team .member .social a {
+    color: #000000;
+    transition: 0.3s;
+  }
+  .team .member .social a:hover {
+    color: #cc1616;
+  }
+  .team .member .social i {
+    color: #000;
+    font-size: 18px;
+    margin: 0 2px;
+  }
