@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { HomeserviceService } from '../service/homeservice.service';
 
@@ -9,7 +10,7 @@ import { HomeserviceService } from '../service/homeservice.service';
 })
 export class HomeComponent implements OnInit {
   AllCategory:any=[]
-  constructor(private spinner:NgxSpinnerService , public HomeAPI:HomeserviceService) {
+  constructor(private spinner:NgxSpinnerService , public HomeAPI:HomeserviceService , private router:Router) {
     
     this.HomeAPI.getCategory().subscribe(result=>{
       console.log(result)
@@ -26,4 +27,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  gotoproduct(){
+    this.router.navigate(['Home/product']);
+  }
 }
