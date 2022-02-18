@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HomeserviceService {
-  
+  Categoryid?:number
   constructor(private http:HttpClient) { }
 
   getCategory(){
@@ -13,4 +13,7 @@ export class HomeserviceService {
     
   }
 
+  getproductbyCategory(){
+    return this.http.get('https://localhost:44368/api/Product/productbyCategory/'+this.Categoryid);  
+  }
 }

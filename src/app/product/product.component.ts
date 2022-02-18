@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeserviceService } from '../service/homeservice.service';
 
 @Component({
   selector: 'app-product',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  Product:any=[]
+  
+  constructor(public HomeAPI:HomeserviceService) {
 
-  constructor() { }
+    this.HomeAPI.getproductbyCategory().subscribe(result=>{
+      console.log(result)
+      this.Product=result});
+
+   }
 
   ngOnInit(): void {
   }

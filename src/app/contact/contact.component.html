@@ -1,34 +1,40 @@
-<p>contact works!</p>
 
-<ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[0]" alt="Random first slide">
-      </div>
-      <div class="carousel-caption">
-      <h1>Welcome to MrCafe </h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[1]" alt="Random second slide">
-      </div>
-      <div class="carousel-caption">
-      <h1>Welcome to MrCafe </h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[2]" alt="Random third slide">
-      </div>
-      <div class="carousel-caption">
-        <h1>Welcome to MrCafe </h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div>
-    </ng-template>
-  </ngb-carousel>
+<section id="contact" class="contact">
+  
+  <div class="cat">
+    <div class="section-title">
+      <span>contact Us</span>
+      <h1>contact Us</h1>
+      <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+    </div>
+  
+    
+    <div class="container" >  
+      <form id="contact"  [formGroup]="form1">
+        <h3></h3>
+        <h4></h4>
+            <div class="form-field">
+          <input placeholder="Your name" type="text"  tabindex="1"formControlName="Name" required />
+            </div>
+            <div class="form-field">      
+                  <input placeholder="Your Email Address" type="email" formControlName="senderemail" tabindex="2" />
+            </div>
+            <div class="form-field">
+          <input placeholder="Your Subject" type="text" tabindex="1" formControlName="subject"  >
+            </div>
+        
+            <div class="form-field">
+          <textarea placeholder="Type your message here...." tabindex="5" formControlName="message" ></textarea>
+            </div>
+        <div class="form-field">
+          <button name="submit" class="btn" (click)="InsertContact()" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </div>
+      
+      </form>
+  
+      
+    </div>
+  </div>
+  
+</section>
+

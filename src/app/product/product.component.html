@@ -1,1 +1,48 @@
-<p>product works!</p>
+<!-- <p>product works!</p>
+<div class="cill col-lg-3"  *ngFor="let item of Product">
+    <div class="container">
+      <h1>{{item.id}}</h1>
+      <h1>{{item.productname}}</h1>
+      <h1>{{item.prodescription}}</h1>
+      <h1>{{item.imagename}}</h1>
+      <h1>{{item.rate}}</h1>
+      <h1>{{item.price}}</h1>
+      <button type="button" class="btn btn-danger btn-lg">selct</button>
+      </div>
+</div> -->
+
+<section id="Category" class="Category">
+  <div class="cat">
+
+  <div class="section-title">
+    <span>Category</span>
+    <h1>Category</h1>
+    <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+  </div>
+
+  
+ 
+    <div class="row">
+      <div class="cill col-lg-3"  *ngFor="let item of Product">
+        <div class="container">
+          <img src="../../assets/img/cat_img.jpg"  class="image" style="width:100%" >
+          <div class="middle">
+            <!-- {{item.id}} -->
+            <h1>{{item.productname}}</h1>
+            <h4>{{item.prodescription}}</h4>
+            <h4>rate:{{item.rate}}  price: ${{item.price}}</h4>
+          </div>
+          <button type="button" class="btn btn-danger btn-lg" >select</button>
+        </div>
+      </div>
+      
+
+    
+    </div>
+
+    
+  
+  </div>
+</section>
+
+

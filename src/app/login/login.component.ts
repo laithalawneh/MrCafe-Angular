@@ -11,5 +11,5 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  images = [6, 7, 8].map((n) => `../../assets/img/bg_${n}.jpg`);
 }
