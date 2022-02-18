@@ -10,6 +10,7 @@ import { SignupserviceService } from '../service/signupservice.service';
 })
 export class SignupComponent implements OnInit {
 
+  ACCtaype?:string
   fname?:string
   lname?:string
   email?:string
@@ -46,26 +47,20 @@ form1=new FormGroup({
   ngOnInit(): void {
   }
   Insertusers(){
-   let object={
-       
-  fname:this.fname,
-  lname:this.lname,
-  email:this.email,
-  phone:this.phone,
-  latitude:this.latitude,
-  longitude:this.longitude,
-  salary:this.salary,
-  userName:this.userName,
-  password:this.password,
-  userId:this.userId,
-  rolename:this.rolename,
-  CafeId:this.CafeId
-      }
-    console.log(this.form1.value)
+   
+    this.form1.patchValue(
+      {
+    rolename: this.ACCtaype
+     })
     this.services.insertUser(this.form1.value)
     
+  }
 
-
+  selectType(Acc:string)
+  {
+    this.ACCtaype=Acc;
+    alert(this.ACCtaype)
+    
   }
 
 }
