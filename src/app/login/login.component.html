@@ -1,1 +1,34 @@
-<p>login works!</p>
+<p>contact works!</p>
+
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+      <h1>Welcome to MrCafe </h1>
+      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+      <h1>Welcome to MrCafe </h1>
+      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h1>Welcome to MrCafe </h1>
+      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </ng-template>
+  </ngb-carousel>

@@ -19,15 +19,13 @@ export class HomeComponent implements OnInit {
     this.spinner.show();
     setTimeout(() => {this.spinner.hide();},2000);   
     
-    
-    
-  
   }
 
   ngOnInit(): void {
   }
 
-  gotoproduct(){
+  gotoproduct(id:number){
+    this.HomeAPI.Categoryid=id;
     this.router.navigate(['Home/product']);
   }
 }

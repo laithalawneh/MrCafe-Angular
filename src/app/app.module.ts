@@ -1,4 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,7 @@ import { CafedashbordComponent } from './cafedashbord/cafedashbord.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import {MatInput,MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { TeamComponent } from './team/team.component';
 import { ProductComponent } from './product/product.component';
-
+import { ToastrModule } from 'ngx-toastr';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,11 @@ import { ProductComponent } from './product/product.component';
     MatTableModule,
     MatButtonModule,
     NgxSpinnerModule,
+    ToastrModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule,
+    FormsModule,
+
     
 
   ],
