@@ -1,1 +1,77 @@
-<p>signup works!</p>
+
+<section id="contact" class="contact">
+  
+    <div class="cat">
+      <div class="section-title">
+        <span>Singup</span>
+        <h1>Singup</h1>
+        <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+      </div>
+    
+      
+      <div class="container" >  
+        <form id="contact"  [formGroup]="form1">
+          <h3></h3>
+          <h4></h4>
+              <div class="form-field">
+            <input placeholder="Your first name" type="text"  tabindex="1"formControlName="fname" required />
+              </div>
+
+              <div class="form-field">
+                <input placeholder="Your last name" type="text"  tabindex="1"formControlName="lname" required />
+                  </div>
+
+              <div class="form-field">      
+                    <input placeholder="Your Email Address" type="email" formControlName="email" tabindex="2" />
+              </div>
+
+              <div class="form-field">
+            <input placeholder="Your phone" type="text" tabindex="1" formControlName="phone"  >
+              </div>
+          
+            <div class="form-field">
+            <input placeholder="Your latitude" type="number"  tabindex="1"formControlName="latitude" required />
+              </div>
+
+              <div class="form-field">
+                <input placeholder="Your longitude" type="number"  tabindex="1"formControlName="longitude" required />
+                  </div>
+
+              <div class="form-field">      
+                    <input placeholder="Your salary" type="number" formControlName="salary" tabindex="2" />
+              </div>
+              
+              <div class="form-field">
+            <input placeholder="Your userName" type="text" tabindex="1" formControlName="userName"  >
+              </div>
+
+              <div class="form-field">
+                <input placeholder="Your password" type="password"  tabindex="1"formControlName="password" required />
+                  </div>
+    
+                  <div class="form-field">
+                    <input placeholder="Your userId" type="number"  tabindex="1"formControlName="userId" required />
+                      </div>
+    
+                  <div class="form-field">      
+                        <input placeholder="Your rolename" type="text" formControlName="rolename" tabindex="2" />
+                  </div>
+                  
+                  <div class="form-field">
+                <input placeholder="Your CafeId" type="number" tabindex="1" formControlName="CafeId"  >
+                  </div>
+
+
+          <div class="form-field">
+            <button name="submit" class="btn" (click)="Insertusers()" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </div>
+        
+        </form>
+    
+        
+      </div>
+    </div>
+    
+  </section>
+  
+  
