@@ -41,7 +41,7 @@ if(object.role=='admin')
   
 this.router.navigate(['Admin'])
 }
-else if(object.role=='user')
+else if(object.role=='Customer')
 {
 
 this.router.navigate(['Home'])
