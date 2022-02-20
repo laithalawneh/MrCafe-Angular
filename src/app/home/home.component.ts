@@ -9,13 +9,19 @@ import { HomeserviceService } from '../service/homeservice.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  AllCategory:any=[]
+  AllCategory:any=[];
+  AllCafes:any=[];
+
   constructor(private spinner:NgxSpinnerService , public HomeAPI:HomeserviceService , private router:Router) {
     
     this.HomeAPI.getCategory().subscribe(result=>{
       console.log(result)
       this.AllCategory=result});
       
+      this.HomeAPI.getPopularCafes().subscribe(result=>{
+        console.log(result)
+        this.AllCafes=result});
+        
     this.spinner.show();
     setTimeout(() => {this.spinner.hide();},2000);   
     

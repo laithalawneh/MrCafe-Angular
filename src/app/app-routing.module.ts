@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:'User',loadChildren:()=>import('./module/usermodule/usermodule-routing.module').then(m=>m.UsermoduleRoutingModule)},
   {path:'Admin',loadChildren:()=>import('./module/adminmodule/adminmodule-routing.module').then(m=>m.AdminmoduleRoutingModule)},
   {path:'Cafe',loadChildren:()=>import('./module/cafemodule/cafemodule-routing.module').then(m=>m.CafemoduleRoutingModule)}
+  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

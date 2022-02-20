@@ -16,4 +16,9 @@ export class HomeserviceService {
   getproductbyCategory(){
     return this.http.get('https://localhost:44368/api/Product/productbyCategory/'+this.Categoryid);  
   }
+
+  getPopularCafes(){
+    return this.http.get('https://localhost:44368/api/Cafes/GetCofesByRateDec');
+    
+  }
 }
