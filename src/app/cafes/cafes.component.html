@@ -1,0 +1,32 @@
+
+<section class="HomeSection">
+	<div class="cat">
+	  <div class="section-title">
+		<span>ALL CAFES</span>
+		<h1>ALL CAFES</h1>
+		<br>
+		<div id="tools">
+			<div class="row">
+				<div class="col-md-3 col-sm-3 col-xs-6">
+					<div class="styled-select">
+						<select name="sort_rating" id="sort_rating">
+							<option value="" selected>Sort by ranking</option>
+							<option value="lower">Lowest ranking</option>
+							<option value="higher">Highest ranking</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-9 col-sm-9 hidden-xs">
+					<a href="list_page.html" class="bt_filters"><i class="icon-list"></i></a>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="col-md-9 offset-2" >
+		<div class="row">
+			<app-shop class="col-md-6 col-sm-6 wow zoomIn" data-wow-delay="0.6s" *ngFor="let item of AllCafes" [cafeid]="item.cafeid" [cafesname]="item.cafesname" [latitude]="item.latitude" [logins]="item.logins" [longitude]="item.longitude" [rate]="item.rate" [wallets]="item.wallets"></app-shop>
+				 
+		</div>
+	  </div>
+	</div>
+  </section>

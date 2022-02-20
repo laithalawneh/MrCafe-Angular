@@ -50,7 +50,12 @@ form1=new FormGroup({
    
     this.form1.patchValue(
       {
-    rolename: this.ACCtaype
+    rolename: "Customer",
+    latitude:0,
+    longitude:0,
+    salary:0,
+    CafeId:2
+    
      })
     this.services.insertUser(this.form1.value)
     

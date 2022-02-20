@@ -28,6 +28,10 @@ import { TeamComponent } from './team/team.component';
 import { ProductComponent } from './product/product.component';
 import { ToastrModule } from 'ngx-toastr';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CafesComponent } from './cafes/cafes.component';
+import { ShopComponent } from './cafes/shop/shop.component';
+import { PopularComponent } from './home/popular/popular.component';
+import { DetailpageComponent } from './detailpage/detailpage.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,11 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserdashbordComponent,
     CafedashbordComponent,
     TeamComponent,
-    ProductComponent
+    ProductComponent,
+    CafesComponent,
+    ShopComponent,
+    PopularComponent,
+    DetailpageComponent
   ],
   imports: [
     BrowserModule,

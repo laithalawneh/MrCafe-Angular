@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
+   <!-- GOOGLE WEB FONT -->
+   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,300,300italic' rel='stylesheet' type='text/css'>
+
+   <!-- BASE CSS -->
+   <link href="assets/css/base.css" rel="stylesheet">
+
   <meta charset="utf-8">
   <title>MrCafe</title>
   <base href="/">
@@ -9,10 +15,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/skins/square/grey.css" rel="stylesheet">
+    <link href="assets/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="assets/css/ion.rangeSlider.skinFlat.css" rel="stylesheet" >
 </head>
 <body style="background-image:url(../assets/img/bg_9.jpg);" class="mat-typography">
 
   <app-root></app-root>
-  
+  <script src="assets/js/jquery-2.2.4.min.js"></script>
+<script src="assets/js/common_scripts_min.js"></script>
+<script src="assets/js/functions.js"></script>
+<!-- SPECIFIC SCRIPTS -->
+<script  src="assets/js/cat_nav_mobile.js"></script>
+<script>$('#cat_nav').mobileMenu();</script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="assets/js/map.js"></script>
+<script src="assets/js/infobox.js"></script>
+<script src="assets/js/ion.rangeSlider.js"></script>
+<script>
+    $(function () {
+		 'use strict';
+        $("#range").ionRangeSlider({
+            hide_min_max: true,
+            keyboard: true,
+            min: 0,
+            max: 15,
+            from: 0,
+            to:5,
+            type: 'double',
+            step: 1,
+            prefix: "Km ",
+            grid: true
+        });
+    });
+</script>
+!-- SPECIFIC SCRIPTS -->
+<script  src="assets/js/cat_nav_mobile.js"></script>
+<script>$('#cat_nav').mobileMenu();</script>
+<script src="assets/js/theia-sticky-sidebar.js"></script>
+<script>
+    jQuery('#sidebar').theiaStickySidebar({
+      additionalMarginTop: 80
+    });
+</script>
+<script>
+$('#cat_nav a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			var target = this.hash;
+			var $target = $(target);
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top - 70
+			}, 900, 'swing', function () {
+				window.location.hash = target;
+			});
+		});
+</script>
 </body>
 </html>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { AuthenserviceService } from '../service/authenservice.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  images = [6, 7, 8].map((n) => `../../assets/img/bg_${n}.jpg`);
+  form1=new FormGroup({
+ 
+    username:new FormControl('',[Validators.required]),
+    password:new FormControl('',[Validators.required])
+  
+  })
+    constructor(public services:AuthenserviceService,private spinner:NgxSpinnerService) { }
+  
+    ngOnInit(): void {
+    }
+  
+  
+    login(){
+    
+      this.services.valid(this.form1.value);
+    }
 }

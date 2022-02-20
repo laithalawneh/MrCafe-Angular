@@ -1,33 +1,175 @@
-
 <app-slider></app-slider>
-<app-about></app-about>
 
-  <section id="Category" class="Category">
-    <div class="cat">
 
+<!--  How it works-->
+
+<section class="HomeSection">
+  <div class="cat">
+    <div class="section-title">
+      <span>How it works</span>
+      <h1>How it works</h1>
+      <p>
+        Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="box_home" id="one">
+          <span>1</span>
+          <h3>Search by address</h3>
+          <p>Find all restaurants available in your zone.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="box_home" id="two">
+          <span>2</span>
+          <h3>Choose a restaurant</h3>
+          <p>We have more than 1000s of menus online.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="box_home" id="three">
+          <span>3</span>
+          <h3>Pay by card or cash</h3>
+          <p>It's quick, easy and totally secure.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="box_home" id="four">
+          <span>4</span>
+          <h3>Delivery or takeaway</h3>
+          <p>You are lazy? Are you backing home?</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--  popular cafes-->
+
+<section class="HomeSection">
+  <div class="cat">
+    <div class="section-title">
+      <span>Choose from Most Popular</span>
+      <h1>Choose from Most Popular</h1>
+      <p>
+        Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
+      </p>
+    </div>
+    <div class="row" style="width: 100%">
+      <app-popular
+        *ngFor="let item of AllCafes"
+        [cafeid]="item.cafeid"
+        [cafesname]="item.cafesname"
+        [latitude]="item.latitude"
+        [logins]="item.logins"
+        [longitude]="item.longitude"
+        [rate]="item.rate"
+        [wallets]="item.wallets"
+      ></app-popular>
+    </div>
+  </div>
+</section>
+
+<!--  Categories  -->
+
+<section class="HomeSection">
+  <div class="cat">
     <div class="section-title">
       <span>Category</span>
       <h1>Category</h1>
-      <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+      <p>
+        Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
+      </p>
     </div>
 
-    
-   
-      <div class="row">
-        <div class="cill col-lg-3"  *ngFor="let item of AllCategory">
-          <div class="container">
-            <img src="../../assets/img/cat_img.jpg"  class="image" style="width:100%" >
-            <div class="middle">
-              <!-- {{item.id}} -->
-              <h1>{{item.categoryname}}</h1>
-              <button type="button" class="btn btn-danger btn-lg" (click)="gotoproduct(item.id)">select</button>
-            </div>
+    <div class="row">
+      <div class="cill col-lg-3" *ngFor="let item of AllCategory">
+        <div class="container">
+          <img
+            src="../../assets/img/cat_img.jpg"
+            class="image"
+            style="width: 100%"
+          />
+          <div class="middle">
+            <!-- {{item.id}} -->
+            <h1>{{ item.categoryname }}</h1>
+            <button
+              type="button"
+              (click)="gotoproduct(item.id)"
+              class="btn btn-danger btn-lg"
+            >
+              select
+            </button>
           </div>
         </div>
       </div>
-
-      
-    
     </div>
-  </section>
+  </div>
+</section>
+
+
+<!--  Work with Us  -->
+
+<section class="HomeSection">
+  <div class="cat">
+    <div class="section-title">
+      <span>Work with Us</span>
+      <h1>Work with Us</h1>
+      <p>
+        Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
+      </p>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2">
+        <a class="box_work" href="submit_restaurant.html">
+          <img
+            src="assets/img/submit_restaurant.jpg"
+            width="848"
+            height="480"
+            alt=""
+            class="img-responsive"
+          />
+          <h3>Submit your Restaurant<span>Start to earn customers</span></h3>
+          <p>
+            Lorem ipsum dolor sit amet, ut virtute fabellas vix, no pri falli
+            eloquentiam adversarium. Ea legere labore eam. Et eum sumo
+            ocurreret, eos ei saepe oratio omittantur, legere eligendi partiendo
+            pro te.
+          </p>
+          <div class="btn_1">Read more</div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a class="box_work" href="submit_driver.html">
+          <img
+            src="assets/img/submit_restaurant.jpg"
+            width="848"
+            height="480"
+            alt=""
+            class="img-responsive"
+          />
+          <h3>We are looking for a Driver<span>Start to earn money</span></h3>
+          <p>
+            Lorem ipsum dolor sit amet, ut virtute fabellas vix, no pri falli
+            eloquentiam adversarium. Ea legere labore eam. Et eum sumo
+            ocurreret, eos ei saepe oratio omittantur, legere eligendi partiendo
+            pro te.
+          </p>
+          <div class="btn_1">Read more</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  team  -->
+
 <app-team></app-team>
+
+<!--  about Us  -->
+
+<app-about></app-about>
