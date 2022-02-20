@@ -10,7 +10,6 @@ import { SignupserviceService } from '../service/signupservice.service';
 })
 export class SignupComponent implements OnInit {
 
-  ACCtaype?:string
   fname?:string
   lname?:string
   email?:string
@@ -61,11 +60,6 @@ form1=new FormGroup({
     
   }
 
-  selectType(Acc:string)
-  {
-    this.ACCtaype=Acc;
-    alert(this.ACCtaype)
-    
-  }
+  
 
 }
