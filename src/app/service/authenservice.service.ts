@@ -38,12 +38,10 @@ export class AuthenserviceService {
 localStorage.setItem('username',object.username)
 if(object.role=='admin')
 {
-  
 this.router.navigate(['Admin'])
 }
 else if(object.role=='Customer')
 {
-
 this.router.navigate(['Home'])
 }
 else if(object.role=='Cafe')
