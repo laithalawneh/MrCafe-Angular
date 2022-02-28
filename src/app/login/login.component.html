@@ -8,33 +8,29 @@
 </ngx-spinner>
 
 
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Login Page with Background Image Example</title>
 
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div id="bg"></div>
-
-
-<form [formGroup]="form1">
-  <div class="form-field">
-    <input type="email" formControlName="username" placeholder="Username" required/>
-  </div>
+<section id="about" class="about">
   
-  <div class="form-field">
-    <input type="password"formControlName="password" placeholder="Password" required/>               
+  <div class="container">
+
+    <div class="section-title">
+      <span>Login page</span>
+      <h1>Login page</h1>
     </div>
-  
-  <div class="form-field">
-    <button id="btn1"class="btn" (click)="  login()" type="submit">Log in</button>
+
+    <form [formGroup]="form1">
+      <div class="form-field">
+        <input type="email" formControlName="username" placeholder="Username" required/>
+      </div>
+      
+      <div class="form-field">
+        <input type="password"formControlName="password" placeholder="Password" required/>               
+        </div>
+      
+      <div class="form-field">
+        <button id="btn1"class="btn" (click)="login()" type="submit">Log in</button>
+      </div>
+    </form>
+
   </div>
-</form>
-<!-- partial -->
-  
-</body>
-</html>
+</section>

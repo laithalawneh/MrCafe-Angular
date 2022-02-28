@@ -1,1 +1,107 @@
-<p>admindashbord works!</p>
+<div
+  class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show"
+  id="sidebar"
+  
+>
+  <div class="c-sidebar-brand d-lg-down-none" style="background-color: rgba(25, 25, 25, 0.95);">
+    <h2 style="color: white;">Therichpost</h2>
+  </div>
+  <ul class="c-sidebar-nav" style="background-color: rgba(25, 25, 25, 0.95);">
+    <li class="c-sidebar-nav-item" (click)="defaultToShow()" style="padding-top: 10%;
+    background-color: rgba(25, 25, 25, 0.95)"><p class="c-sidebar-nav-link default" style="margin-left: 20%;
+    font-size: x-large;color: rgb(255, 255, 255);font-family: cursive;">Mr Cafe</p></li>
+    <li class="c-sidebar-nav-title">Cafes and Employess</li>
+
+    <li class="c-sidebar-nav-item" (click)="itemToShow(1)"><p class="c-sidebar-nav-link">
+    <svg class="c-sidebar-nav-icon">
+    <use xlink:href="assets/dashboard/icons/svg/free.svg#cil-drop"></use>
+    </svg>All Cafes</p></li>
+
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" (click)="itemToShow(2)">
+    <svg class="c-sidebar-nav-icon">
+    <use xlink:href="assets/dashboard/icons/svg/free.svg#cil-drop"></use>
+    </svg>All Employees</a></li>
+
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" (click)="itemToShow(3)">
+      <svg class="c-sidebar-nav-icon">
+      <use xlink:href="assets/dashboard/icons/svg/free.svg#cil-drop"></use>
+      </svg>Create Accountant</a></li>
+    <li class="c-sidebar-nav-title">Finance and bussiness</li>
+
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+        <svg class="c-sidebar-nav-icon">
+        <use xlink:href="assets/dashboard/icons/svg/free.svg#cil-drop"></use>
+    </svg>All Orders</a></li>
+
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+        <svg class="c-sidebar-nav-icon">
+        <use xlink:href="assets/dashboard/icons/svg/free.svg#cil-drop"></use>
+    </svg>?????</a></li>
+    
+    <li class="c-sidebar-nav-title">Testimonial and Reviews</li>
+  
+    
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+        <svg class="c-sidebar-nav-icon">
+        <use xlink:href="assets/dashboard/icons/svg/free.svg#cil-drop"></use>
+    </svg>All testimonial</a></li>
+    
+ 
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+        <svg class="c-sidebar-nav-icon">
+        <use xlink:href="assets/dashboard/icons/svg/free.svg#cil-drop"></use>
+    </svg>All Rviews</a></li>
+
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+        <svg class="c-sidebar-nav-icon">
+        <use xlink:href="assets/dashboard/icons/svg/free.svg#cil-drop"></use>
+    </svg>Contact us </a></li>
+    </ul>
+</div>
+<div class="c-wrapper c-fixed-components">
+  <app-header></app-header>
+  <div class="c-body" style="    background-color: rgba(25, 25, 25, 0.95) !important;">
+    <main class="c-main">
+      <div class="container-fluid">
+        <div class="fade-in">
+
+          <div class="row" style="width: 100%" *ngIf="selectedName === 'AllCafes'">
+            <app-all-cafes
+              *ngFor="let item of AllCafes"
+              [cafeid]="item.cafeid"
+              [cafesname]="item.cafesname"
+              [latitude]="item.latitude"
+              [logins]="item.logins"
+              [longitude]="item.longitude"
+              [rate]="item.rate"
+              [wallets]="item.wallets"
+            ></app-all-cafes>
+          </div>
+
+          <div class="row" style="width: 100% " *ngIf="selectedName === 'AllDeleivery'">
+            <app-riders
+              *ngFor="let item of AllDeleviry"
+              [id]="item.id"
+              [name]="item.name"
+              [phone]="item.phone"
+              [userName]="item.userName"
+              [password]="item.password"
+              [status]="item.status"
+              [salary]="item.salary"
+              [adresses]="item.adresses"
+              [deliveryorders]="item.deliveryorders"
+            ></app-riders>
+          </div>
+
+          
+          <app-membersonline *ngIf="selectedDefault === ''"></app-membersonline>
+          <app-charts *ngIf="selectedDefault === ''"></app-charts>
+        </div>
+      </div>
+    </main>
+  
+    <!--all cafes-->
+
+<!--end of all cafes-->
+  </div>
+</div>

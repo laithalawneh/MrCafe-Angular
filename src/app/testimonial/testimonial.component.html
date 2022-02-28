@@ -1,1 +1,64 @@
-<p>testimonial works!</p>
+
+<section id="team" class="team">
+    <div class="container">
+  
+      <div class="section-title">
+        <span>Testimonial</span>
+        <h2>Testimonial</h2>
+        <p>What they're saying about us</p>
+      </div>
+      <div class="container">
+        <form id="contact"  [formGroup]="form1">
+            
+                <div class="form-field">
+              <input placeholder="Your name" type="text"  tabindex="1"formControlName="Name" required />
+                </div>
+                <div class="form-field">
+              <textarea placeholder="Type your message here...." tabindex="5" formControlName="message" ></textarea>
+                </div>
+            <div class="form-field">
+              <button name="submit" class="btn" (click)="InsertContact()" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            </div>
+          
+          </form>
+          <br>
+        <div class="row">
+            <div class="col-md-12" style=" box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.7);">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel" >
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner text-center" >
+                        <!-- Quote 1 -->
+                        <div class="item active">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <p></p>
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <div class="item " *ngFor="let item of Allacceptedtestimonial; let i = index">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <p>{{Allacceptedtestimonial[i+1].testcontent}}</p>
+                                        <small>{{Allacceptedtestimonial[i+1].name}}</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        
+                    </div>                    
+    
+                    <!-- Carousel Buttons Next/Prev -->
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control" ><i class="bi bi-arrow-bar-left" style="color: black;"></i></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="bi bi-arrow-bar-right"style="color: black;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>  
+    </div>
+  </section>
+  

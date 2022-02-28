@@ -1,0 +1,15 @@
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2-xkIuso787GJRvu-9u5FYggg5aruePM&callback=initMap"></script>
+<google-map height="400px" width="100%" [zoom]="zoom" [center]="center" [options]="options" (mapClick)="click($event)">
+
+<map-info-window>{{infoContent}}</map-info-window>
+    <map-marker #markerElem
+  *ngFor="let marker of markers"
+  [position]="marker.position"
+  [label]="marker.label"
+  [title]="marker.title"
+  [info]="marker.info"
+  [options]="marker.options"
+  (mapClick)="gotoCafe(marker.info)">
+</map-marker>
+
+</google-map>

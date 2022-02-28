@@ -1,0 +1,19 @@
+<div class="container">
+    <div >
+        <a class="strip_list grid" >
+            <div class="desc">
+                <div class="thumb_strip">
+                    <img src="https://previews.123rf.com/images/bsd555/bsd5551803/bsd555180300924/98164818-icono-de-color-del-controlador-servicio-de-transporte-ilustraci%C3%B3n-de-vector-aislado.jpg" alt="">
+                </div>
+                <h2>driver id : {{id}}</h2>
+                <h3>
+                    driver name : {{name}}
+                </h3>
+                <h3>phone : {{phone}}</h3>
+                <!--bold light color-->
+                <h3 *ngIf = "status == '0'" style="background-color: red;">busy </h3>
+                <h3 *ngIf = "status == '1'" style="background-color: green;"> avilabel</h3>
+            </div>
+        </a><!-- End strip_list-->
+    </div>
+</div>

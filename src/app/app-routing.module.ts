@@ -12,7 +12,8 @@ const routes: Routes = [
   {path:'Home',loadChildren:()=>import('./module/homemodule/homemodule-routing.module').then(m=>m.HomemoduleRoutingModule)},
   {path:'User',loadChildren:()=>import('./module/usermodule/usermodule-routing.module').then(m=>m.UsermoduleRoutingModule)},
   {path:'Admin',loadChildren:()=>import('./module/adminmodule/adminmodule-routing.module').then(m=>m.AdminmoduleRoutingModule)},
-  {path:'Cafe',loadChildren:()=>import('./module/cafemodule/cafemodule-routing.module').then(m=>m.CafemoduleRoutingModule)}
+  {path:'Cafe',loadChildren:()=>import('./module/cafemodule/cafemodule-routing.module').then(m=>m.CafemoduleRoutingModule)},
+  {path:'Delivery',loadChildren:()=>import('./module/deliverymodule/deliverymodule-routing.module').then(m=>m.DeliverymoduleRoutingModule)}
   
 ];
 @NgModule({

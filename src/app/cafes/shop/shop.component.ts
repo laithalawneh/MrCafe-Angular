@@ -21,6 +21,7 @@ export class ShopComponent implements OnInit {
   }
 
   CafeDetail(){
+    
     this.cafeAPI.getProductsByCafe(this.cafeid);
     if(this.cafesname !=undefined)
     localStorage.setItem('cafename',this.cafesname);

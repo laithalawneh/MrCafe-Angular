@@ -9,8 +9,8 @@ export class PopularComponent implements OnInit {
   @Input()cafeid:number | undefined;
   @Input()cafesname:string |undefined;
   @Input()rate:number | undefined;
-  @Input ()latitude:number |undefined;
-  @Input ()longitude:number |undefined;
+  @Input()latitude:number |undefined;
+  @Input()longitude:number |undefined;
   @Input()wallets:string | undefined;
   @Input()products:string | undefined;
   @Input()logins:string | undefined;
