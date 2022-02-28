@@ -32,7 +32,19 @@ import { CafesComponent } from './cafes/cafes.component';
 import { ShopComponent } from './cafes/shop/shop.component';
 import { PopularComponent } from './home/popular/popular.component';
 import { DetailpageComponent } from './detailpage/detailpage.component';
+import { DeliveryComponent } from './delivery/delivery/delivery.component';
+import { DeliveryloginComponent } from './delivery/deliverylogin/deliverylogin.component';
+import { DeliverysingupComponent } from './delivery/deliverysingup/deliverysingup.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { MaphomeComponent } from './maphome/maphome.component';
+import { SignupCafeComponent } from './cafes/signup-cafe/signup-cafe.component'
 
+
+import { HeaderComponent } from './admindashbord/header/header.component';
+import { MembersonlineComponent } from './admindashbord/membersonline/membersonline.component';
+import { ChartsComponent } from './admindashbord/charts/charts.component';
+import { AllCafesComponent } from './admindashbord/all-cafes/all-cafes.component';
+import { RidersComponent } from './admindashbord/riders/riders.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +67,17 @@ import { DetailpageComponent } from './detailpage/detailpage.component';
     CafesComponent,
     ShopComponent,
     PopularComponent,
-    DetailpageComponent
+    DetailpageComponent,
+    DeliveryComponent,
+    DeliveryloginComponent,
+    DeliverysingupComponent,
+    MaphomeComponent,
+    SignupCafeComponent,
+    HeaderComponent,
+    MembersonlineComponent,
+    ChartsComponent,
+    AllCafesComponent,
+    RidersComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +95,7 @@ import { DetailpageComponent } from './detailpage/detailpage.component';
     FormsModule,
     ReactiveFormsModule,
     FormsModule,
+    GoogleMapsModule
 
     
 

@@ -1,0 +1,84 @@
+
+<section id="contact" class="contact">
+  <div class="cat">
+    <div class="section-title">
+      <span>Singup</span>
+      <h1>Singup</h1>
+      <p>Join our Family :)</p>
+    </div>
+
+    <div class="container">
+        <form  [formGroup]="form">
+          <div class="form-field">
+            <input
+              placeholder="Your Name"
+              type="text"
+              tabindex="1"
+              formControlName="Name"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <input
+              placeholder="Your phone"
+              type="text"
+              tabindex="1"
+              formControlName="phone"
+            />
+          </div>
+          
+
+          <div class="form-field">
+            <input
+              placeholder="Your UserName"
+              type="text"
+              tabindex="1"
+              formControlName="UserName"
+            
+            />
+          </div>
+
+        <div class="form-field">
+          <input
+            placeholder="Your password"
+            type="password"
+            tabindex="1"
+            formControlName="password"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <input
+            placeholder="Your Status"
+            type="number"
+            tabindex="1"
+            formControlName="Status"
+   hidden
+          />
+        </div>
+
+        <div class="form-field">
+          <input
+            placeholder="Your Salary"
+            type="number"
+            formControlName="Salary"
+            tabindex="2"
+          hidden
+          />
+        </div>    
+        
+        <div class="form-field">
+          <button
+            name="submit"
+            class="btn"
+            (click)="CreateDelivery()"
+            type="submit"
+            id="contact-submit"
+            data-submit="...Sending"
+          >
+            Submit
+          </button>
+        </div>
+      </form>

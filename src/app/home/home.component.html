@@ -126,9 +126,9 @@
 
     <div class="row">
       <div class="col-md-4 col-md-offset-2">
-        <a class="box_work" href="submit_restaurant.html">
+        <a class="box_work" [routerLink]="'Cafe/Signup'">
           <img
-            src="../../assets/img/cafe-icon.jpg"
+            src="../../assets/img/cafe-icon2.jpg"
             width="848"
             height="480"
             alt=""
@@ -140,7 +140,7 @@
         </a>
       </div>
       <div class="col-md-4">
-        <a class="box_work" href="submit_driver.html">
+        <a class="box_work" [routerLink]="'Delivery/singup'">
           <img
             src="../../assets/img/D-delivery-icon.png"
             width="848"
@@ -156,6 +156,11 @@
     </div>
   </div>
 </section>
+
+<!--  testimonial   -->
+
+<app-testimonial></app-testimonial>
+
 <!--  team  -->
 
 <app-team></app-team>

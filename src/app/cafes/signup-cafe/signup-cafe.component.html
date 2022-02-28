@@ -1,0 +1,126 @@
+<section id="contact" class="contact">
+    <div class="cat">
+      <div class="section-title">
+        <span>Singup</span>
+        <h1>Singup</h1>
+        <p>
+          Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
+        </p>
+      </div>
+  
+      <div class="container">
+        <form>
+          <div class="form-field">
+            <input
+              placeholder="Your rate"
+              type="number"
+              tabindex="1"
+              formControlName="rate" hidden
+            />
+          </div>
+          
+          <form  [formGroup]="form1">
+            <h3></h3>
+            <h4></h4>
+            <div class="form-field">
+              <input
+                placeholder="Your cafe Name"
+                type="text"
+                tabindex="1"
+                formControlName="cafesname"
+                required
+              />
+            </div>
+  
+            
+            
+  
+            <div class="form-field">
+              <input
+                placeholder="Your latitude"
+                type="number"
+                tabindex="1"
+                formControlName="latitude"
+                hidden
+              />
+            </div>
+  
+            <div class="form-field">
+              <input
+                placeholder="Your longitude"
+                type="number"
+                tabindex="1"
+                formControlName="longitude"
+                hidden
+              />
+            </div>
+  
+          </form>
+          <form  [formGroup]="form2">
+          <div class="form-field">
+            <input
+              placeholder="Your userName"
+              type="text"
+              tabindex="1"
+              formControlName="userName"
+            />
+          </div>
+  
+          <div class="form-field">
+            <input
+              placeholder="Your password"
+              type="password"
+              tabindex="1"
+              formControlName="password"
+              required
+            />
+          </div>
+  
+          <div class="form-field">
+            <input
+              placeholder="Your userId"
+              type="number"
+              tabindex="1"
+              formControlName="userid"
+              hidden
+            />
+          </div>
+  
+          <div class="form-field">
+            <input
+              placeholder="Your rolename"
+              type="text"
+              formControlName="rolename"
+              tabindex="2"
+              hidden
+            />
+          </div>
+  
+          <div class="form-field">
+            <input
+              placeholder="Your CafeId"
+              type="number"
+              tabindex="1"
+              formControlName="CafeId"
+              hidden
+            />
+          </div>
+         
+        </form>
+        <div class="form-field">
+          <button
+            name="submit"
+            class="btn"
+            (click)="Insertusers()"
+            type="submit"
+            id="contact-submit"
+            data-submit="...Sending"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </section>
+  

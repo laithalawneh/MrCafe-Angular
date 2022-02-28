@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeserviceService } from '../service/homeservice.service';
 
 @Component({
   selector: 'app-slider',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit {
+  WebsiteName?:string
+  constructor( public HomeAPI:HomeserviceService) {
 
-  constructor() { }
+    this.HomeAPI.getwebsiteDetails().subscribe(result=>{
+      this.HomeAPI.Website=result ;
+      this.WebsiteName=this.HomeAPI.Website[0].websitename;
+    });
+   }
 
   ngOnInit(): void {
   }

@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HomeserviceService {
-  Categoryid?:number
+  Categoryid?:number;
+  Website:any=[];
   constructor(private http:HttpClient) { }
 
   getCategory(){
@@ -13,6 +14,10 @@ export class HomeserviceService {
     
   }
 
+  GetAllacceptedtestimonial(){
+    return this.http.get('https://localhost:44368/api/Testimonial/GetAllacceptedtestimonial');
+    
+  }
   getproductbyCategory(){
     return this.http.get('https://localhost:44368/api/Product/productbyCategory/'+this.Categoryid);  
   }
@@ -20,5 +25,9 @@ export class HomeserviceService {
   getPopularCafes(){
     return this.http.get('https://localhost:44368/api/Cafes/GetCofesByRateDec');
     
+  }
+
+  getwebsiteDetails(){
+    return this.http.get('https://localhost:44368/api/WebSite/websiteDetails/3')
   }
 }
