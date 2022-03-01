@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="icing">
+      <h2>Your Order</h2>
+      <ul class="order">
+        <li><span class="item-count"></span><span class="item-name"></span><span class="item-price"></span></li>
+      </ul>
+      <div class="total">${{totalcost}}</div>
+    </div>
+    <div class="dough">
+      <h2>Payment</h2>
+      <form class="form" [formGroup]="form1" >
+        <div class="inputs">
+          <div class="row">
+            <div class="column card-group">
+              <label class="label" for="card">Card Number</label>
+              <input class="text-input card-input" formControlName="serialNumber" id="card" placeholder="1234 5678 9012 3456"/>
+              <mat-error *ngIf="form1.controls['serialNumber'].hasError('required')">
+                Serial Number is <strong>required</strong>
+                           </mat-error>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="column name-group">
+              <label class="label" for="name">Password Card</label>
+              <input class="text-input name-input" type="password" formControlName="password" id="name"/>
+              
+            </div>
+            <mat-error *ngIf="form1.controls['password'].hasError('required')">
+                &nbsp; Password is <strong>required</strong>
+                           </mat-error>
+          </div>
+          <div class="row">
+          
+          
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="order-button" (click)="PayCard()">Pay</button>
+        </div>
+      </form>
+    </div>
+  </div>

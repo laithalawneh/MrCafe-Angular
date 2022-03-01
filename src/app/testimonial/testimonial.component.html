@@ -8,19 +8,7 @@
         <p>What they're saying about us</p>
       </div>
       <div class="container">
-        <form id="contact"  [formGroup]="form1">
-            
-                <div class="form-field">
-              <input placeholder="Your name" type="text"  tabindex="1"formControlName="Name" required />
-                </div>
-                <div class="form-field">
-              <textarea placeholder="Type your message here...." tabindex="5" formControlName="message" ></textarea>
-                </div>
-            <div class="form-field">
-              <button name="submit" class="btn" (click)="InsertContact()" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-            </div>
-          
-          </form>
+        
           <br>
         <div class="row">
             <div class="col-md-12" style=" box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.7);">
@@ -32,8 +20,8 @@
                             <blockquote>
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <p></p>
-                                        <small></small>
+                                        <p>{{Allacceptedtestimonial[0].testcontent}}</p>
+                                        <small>{{Allacceptedtestimonial[0].name}}</small>
                                     </div>
                                 </div>
                             </blockquote>
@@ -57,8 +45,25 @@
                 </div>
             </div>
         </div>
+        <br><br> 
+        <form id="contact"  [formGroup]="form">
+            
+            <div class="form-field">
+          <input placeholder="Your name" type="text"  tabindex="1"formControlName="name" required />
+            </div>
+            <div class="form-field">
+          <textarea placeholder="Type your message here...." tabindex="5" formControlName="testcontent" ></textarea>
+            </div>
+            <input placeholder="Your id" type="text"  tabindex="1"formControlName="id" hidden />
+            <input placeholder="Your stuts" type="text"  tabindex="1"formControlName="status" hidden />
+
+        <div class="form-field">
+          <button name="submit" class="btn" (click)="inserttestimonial()" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </div>
+      
+      </form>
     </div>
-    <br><br><br><br>  
+    <br><br> 
     </div>
   </section>
   

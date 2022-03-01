@@ -1,0 +1,41 @@
+<div class="card" style="margin-top: 60px;margin-bottom: 60px;">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col">
+                        <h4><b>Shopping Cart</b></h4>
+                    </div>
+                    <div class="col align-self-center text-right text-muted">Item {{arr.length}}</div>
+                </div>
+            </div>
+            <div *ngFor="let item of arr" class="row border-top border-bottom">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/1GrakTl.jpg"></div>
+                    <div class="col">
+                        <div class="row text-muted">{{item.productname}}</div>
+                    </div>
+                    <div class="col"> <a (click)="addItem(item ,2)">-</a><a href="#" class="border">{{item.quantity}}</a><a (click)="addItem(item ,1)">+</a> </div>
+                    <div class="col">&euro;{{item.quantity* item.price}}<span class="close" (click)="deleteItem(item.id)">&#10005;</span></div>
+                </div>
+            
+            <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+        </div>
+       
+    </div>
+    <div class="col-md-4 summary">
+        <div>
+            <h5><b>Summary</b></h5>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col" style="padding-left:0;">ITEMS {{arr.length}}</div>
+            <div class="col text-right">&euro; {{totalcost}}</div>
+        </div>
+       
+        <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+            <div class="col">TOTAL PRICE</div>
+            <div class="col text-right">${{(totalcost || 0)+(totalcost || 0)*0.1}}</div>
+        </div> <button class="btn" (click)="gopay()">CHECKOUT</button>
+    </div>
+</div>

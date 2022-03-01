@@ -20,7 +20,32 @@ export class CafesComponent implements OnInit {
         this.AllCafes=result});
    }
 
+   
+ 
+
   ngOnInit(): void {
   }
+
+
+  sortCafes(item :any){
+    console.log("llllllllllll");
+    if(item.target.value == "lower"){
+      this.cafesAPI.GetCofesByRateAsc().subscribe(res => this.AllCafes =res)
+    }
+    else if(item.target.value == "higher"){
+      this.cafesAPI.GetCofesByRateDec().subscribe(res=> this.AllCafes=res);
+    }
+    else{
+      this.cafesAPI.getAllCafes().subscribe(result=>{
+        console.log(result)
+        this.AllCafes=result});
+   }
+    
+  }
+
+
+  
+  
+
 
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CafedashbordComponent } from 'src/app/cafedashbord/cafedashbord.component';
 import { SignupCafeComponent } from 'src/app/cafes/signup-cafe/signup-cafe.component';
+import { DetailpageComponent } from 'src/app/detailpage/detailpage.component';
 
 const routes: Routes = [
   {path:'',component:CafedashbordComponent},
