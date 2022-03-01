@@ -123,6 +123,7 @@ export class MaphomeComponent implements OnInit {
   gotoCafe(id:number) {
 
     console.log("Cafe : "+id)
+    this.router.navigate([`Home/detailpage/${id}`])
     //this.CafeAPI.getProductsByCafe(id)
     
   }

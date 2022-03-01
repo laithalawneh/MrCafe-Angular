@@ -31,7 +31,6 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CafesComponent } from './cafes/cafes.component';
 import { ShopComponent } from './cafes/shop/shop.component';
 import { PopularComponent } from './home/popular/popular.component';
-import { DetailpageComponent } from './detailpage/detailpage.component';
 import { DeliveryComponent } from './delivery/delivery/delivery.component';
 import { DeliveryloginComponent } from './delivery/deliverylogin/deliverylogin.component';
 import { DeliverysingupComponent } from './delivery/deliverysingup/deliverysingup.component';
@@ -39,12 +38,18 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { MaphomeComponent } from './maphome/maphome.component';
 import { SignupCafeComponent } from './cafes/signup-cafe/signup-cafe.component'
 
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { HeaderComponent } from './admindashbord/header/header.component';
 import { MembersonlineComponent } from './admindashbord/membersonline/membersonline.component';
 import { ChartsComponent } from './admindashbord/charts/charts.component';
 import { AllCafesComponent } from './admindashbord/all-cafes/all-cafes.component';
 import { RidersComponent } from './admindashbord/riders/riders.component';
+import { CartComponent } from './cart/cart.component';
+import { NavdialogComponent } from './detailpage/navdialog/navdialog.component';
+import { DetailpageComponent } from './detailpage/detailpage.component';
+import { MatDialog } from '@angular/material/dialog';
+import { PayComponent } from './pay/pay.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +72,6 @@ import { RidersComponent } from './admindashbord/riders/riders.component';
     CafesComponent,
     ShopComponent,
     PopularComponent,
-    DetailpageComponent,
     DeliveryComponent,
     DeliveryloginComponent,
     DeliverysingupComponent,
@@ -77,7 +81,11 @@ import { RidersComponent } from './admindashbord/riders/riders.component';
     MembersonlineComponent,
     ChartsComponent,
     AllCafesComponent,
-    RidersComponent
+    RidersComponent,
+    CartComponent,
+    NavdialogComponent,
+    DetailpageComponent,
+    PayComponent    
   ],
   imports: [
     BrowserModule,
@@ -95,7 +103,8 @@ import { RidersComponent } from './admindashbord/riders/riders.component';
     FormsModule,
     ReactiveFormsModule,
     FormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    MatDialogModule
 
     
 

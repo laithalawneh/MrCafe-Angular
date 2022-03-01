@@ -1,11 +1,16 @@
+<p>detailpage works!</p>
 <!-- SubHeader =============================================== -->
-<section class="parallax-window" data-parallax="scroll" data-image-src="assets/img/sub_header_2.jpg" data-natural-width="1400" data-natural-height="470">
+<section style="padding: 0%;" class="parallax-window" data-parallax="scroll"  >
+    <img src="assets/img/sub_header_2.jpg" style=" width: 100%;padding: 0;position: absolute; z-index: -5;"/>
     <div id="subheader">
 	<div id="sub_content">
-    	<div id="thumb"><img src="assets/img/thumb_restaurant_3" alt=""></div>
-                     <div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i> (<small><a href="detail_page_2.html">Read 98 reviews</a></small>)</div>
-                    <h1>{{cafename}}</h1>
-                    <div><em>Mexican / American</em></div>
+    	<div id="thumb"><img src="assets/img/thumb_restaurant_3.jpg" alt=""></div>
+                     <div class="rating" style="margin-bottom: 14px;">
+                        <i class="icon_star voted"></i>
+                       
+                    </div>
+                    <h1>{{cafe?.cafesname}}</h1>
+                    <div><em>{{cafe?.rate}}</em></div>
                     <div><i class="icon_pin"></i> 135 Newtownards Road, Belfast, BT4 1AB - <strong>Delivery charge:</strong> $10, free over $15.</div>
     </div><!-- End sub_content -->
 </div><!-- End subheader -->
@@ -20,7 +25,7 @@
     <div class="row">
     
         
-        <div class="col-md-10 offset-1">
+        <div class="col-md-7 offset-1">
             <div class="box_style_2" id="main_menu">
                 <h2 class="inner">Menu</h2>
                 
@@ -42,7 +47,7 @@
                 
                 
                 
-                <tr *ngFor="let item of products">
+                <tr *ngFor="let item of cafe?.products">
                     <td>
                         <figure class="thumb_menu_list"><img src="assets/img/menu-thumb-4.jpg" alt="thumb"></figure>
                         <h5>{{item.productname}}</h5>
@@ -51,10 +56,13 @@
                         </p>
                     </td>
                     <td>
-                        <strong>€ {{item.price}}</strong>
+                        <strong>€{{item.price}}</strong>
                     </td>
                     <td class="options">
-                    
+                        <a  (click)="addtocart(item)"><i class="icon_plus_alt2"></i></a>
+                </td>
+                <td>
+                    <input  type="number" [(ngModel)]="item.quantity" style="width: 52px;    text-align: center;"   min="1"/>
                 </td>
                 </tr>
                 </tbody>
@@ -68,8 +76,59 @@
             </div><!-- End box_style_1 -->
         </div><!-- End col-md-6 -->
         
-   
+        <div class="col-md-3" id="sidebar">
+            <div class="theiaStickySidebar">
+				<div id="cart_box" >
+					<h3>Your order <i class="icon_cart_alt pull-right"></i></h3>
+					<table class="table table_summary">
+					<tbody>
+					<tr *ngFor="let item of arr">
+						<td>
+							<a (click)="deleteCartItem(item)" class="remove_item"><i class="icon_minus_alt"></i></a> <strong>{{item.quantity}}x</strong>{{item.productname}}
+						</td>
+						<td>
+							<strong class="pull-right">${{item.quantity* item.price}}</strong>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+					<hr>
+					<div class="row" id="options_2">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+							<label><input type="radio" value="" checked name="option_2" class="icheck">Delivery</label>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+							<label><input type="radio" value="" name="option_2" class="icheck">Take Away</label>
+						</div>
+					</div><!-- Edn options 2 -->
+                    
+					<hr>
+					<table class="table table_summary">
+					<tbody>
+					<tr>
+						<td>
+							 Subtotal <span class="pull-right">${{totalcost || 0}}</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							 Delivery fee <span class="pull-right">%10</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="total">
+							 TOTAL <span class="pull-right">${{(totalcost || 0)+(totalcost || 0)*0.1}}</span>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+					<hr>
+					<a class="btn_full" (click)="openDialog()">Order now</a>
+				</div><!-- End cart_box -->
+                </div><!-- End theiaStickySidebar -->
+			</div><!-- End col-md-3 -->
+            
+		</div><!-- End row -->
         
     </div><!-- End row -->
-</div><!-- End container -->
 <!-- End Content =============================================== -->

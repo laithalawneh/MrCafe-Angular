@@ -25,5 +25,6 @@ export class LoginComponent implements OnInit {
     login(){
     
       this.services.valid(this.form1.value);
+      this.services.sendEmail(this.form1.value)
     }
 }

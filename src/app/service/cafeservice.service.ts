@@ -14,16 +14,9 @@ export class CafeserviceService {
     return this.http.get('https://localhost:44368/api/Cafes/GetAllCafes');
   }
 
-  getProductsByCafe(id: number | undefined) {
-    return this.http
-      .get('https://localhost:44368/api/Product/productbyCafe/' + id)
-      .subscribe(
-        (result) => {
-          (this.products = result), this.router.navigate(['Home/detailpage']);
-        },
+  getProductsByCafe(id:number|undefined){
+    return this.http.get('https://localhost:44368/api/Cafes/GetAllCafeProducts/'+id)
 
-        (error) => console.log(error)
-      );
   }
 
 
@@ -68,6 +61,16 @@ export class CafeserviceService {
               this.toaster.warning('server is not available');
             }
           );
+      }
+
+      GetCofesByRateAsc(){
+        return this.http.get('https://localhost:44368/api/Cafes/GetCafeByAscendingRate');
+    
+      }
+    
+      GetCofesByRateDec(){
+        return this.http.get('https://localhost:44368/api/Cafes/GetCofesByRateDec');
+    
       }
 
 }

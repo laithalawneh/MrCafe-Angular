@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CafeserviceService } from 'src/app/service/cafeservice.service';
 
 @Component({
@@ -15,16 +16,14 @@ export class ShopComponent implements OnInit {
   @Input()wallets:string | undefined;
   @Input()products:string | undefined;
   @Input()logins:string | undefined;
-  constructor(private cafeAPI:CafeserviceService) { }
+  constructor(private cafeAPI:CafeserviceService,private router:Router) { }
 
   ngOnInit(): void {
   }
 
   CafeDetail(){
     
-    this.cafeAPI.getProductsByCafe(this.cafeid);
-    if(this.cafesname !=undefined)
-    localStorage.setItem('cafename',this.cafesname);
+    this.router.navigate([`Home/detailpage/${this.cafeid}`])
 
     console.log("the id is " + this.cafeid);
 

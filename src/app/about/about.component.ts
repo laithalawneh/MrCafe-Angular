@@ -7,11 +7,14 @@ import { HomeserviceService } from '../service/homeservice.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  WebsiteAbout?:string
+  WebsiteAbout?:string;
+  WebsiteAboutImg?:string
+
   constructor(public HomeAPI:HomeserviceService) {
     this.HomeAPI.getwebsiteDetails().subscribe(result=>{
       this.HomeAPI.Website=result ;
       this.WebsiteAbout=this.HomeAPI.Website[0].aboutus;
+      this.WebsiteAboutImg=this.HomeAPI.Website[0].image3;
     });
    }
 
