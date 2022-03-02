@@ -1,0 +1,92 @@
+<section id="contact" class="contact">
+  
+  <div class="cat">
+    <div class="section-title">
+      <h1>Create Accountant</h1>
+    </div>
+    <div class="container">
+        <form  [formGroup]="form1">
+          <div class="form-field">
+            <input
+              placeholder="Your first name"
+              type="text"
+              tabindex="1"
+              formControlName="fname"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <input
+              placeholder="Your last name"
+              type="text"
+              tabindex="1"
+              formControlName="lname"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <input
+              placeholder=" Email "
+              type="email"
+              formControlName="email"
+              tabindex="2"
+            />
+          </div>
+
+          <div class="form-field">
+            <input
+              placeholder="phone"
+              type="text"
+              tabindex="1"
+              formControlName="phone"
+            />
+          </div>
+
+        <div class="form-field">
+          <input
+            placeholder="user name"
+            type="text"
+            tabindex="1"
+            formControlName="userName"
+          />
+        </div>
+
+        <div class="form-field">
+          <input
+            placeholder="password"
+            type="password"
+            tabindex="1"
+            formControlName="password"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <input
+            placeholder="salary"
+            type="number"
+            tabindex="1"
+            formControlName="salary"
+            required
+          />
+        </div>
+    
+      <div class="form-field">
+        <button
+          name="submit"
+          class="btn"
+          (click)="Insertusers()"
+          type="submit"
+          id="contact-submit"
+          data-submit="...Sending"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+    </div>
+  </div>
+  
+</section>

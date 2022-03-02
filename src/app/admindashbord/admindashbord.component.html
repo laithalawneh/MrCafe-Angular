@@ -93,7 +93,11 @@
             ></app-riders>
           </div>
 
-          
+          <div class="form" *ngIf="selectedName === 'CreateACC'">
+              <app-create-accountant></app-create-accountant>
+          </div>
+
+
           <app-membersonline *ngIf="selectedDefault === ''"></app-membersonline>
           <app-charts *ngIf="selectedDefault === ''"></app-charts>
         </div>

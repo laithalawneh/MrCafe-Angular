@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { SignupserviceService } from '../service/signupservice.service';
+import { SignupserviceService } from 'src/app/service/signupservice.service';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-create-accountant',
+  templateUrl: './create-accountant.component.html',
+  styleUrls: ['./create-accountant.component.css']
 })
-export class SignupComponent implements OnInit {
+export class CreateAccountantComponent implements OnInit {
 
   form1 = new FormGroup({
     fname: new FormControl('', [Validators.required]),
@@ -27,8 +27,8 @@ export class SignupComponent implements OnInit {
 
   Insertusers() {
     this.form1.patchValue({
-      salary:0,
-      rolename:"customer"
+      
+      rolename:"accountant"
     })
 
    this.services.CreateUser(this.form1.value).subscribe((res)=>{
@@ -36,7 +36,7 @@ export class SignupComponent implements OnInit {
   },
   (res)=>{
     console.log(res)
-    this.toaster.error("missing data");
+    this.toaster.error("Try Again");
   })
   }
 

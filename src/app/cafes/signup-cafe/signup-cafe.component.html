@@ -3,13 +3,10 @@
       <div class="section-title">
         <span>Singup</span>
         <h1>Singup</h1>
-        <p>
-          Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
-        </p>
       </div>
   
       <div class="container">
-        <form>
+        <form  [formGroup]="form1">
           <div class="form-field">
             <input
               placeholder="Your rate"
@@ -19,10 +16,7 @@
             />
           </div>
           
-          <form  [formGroup]="form1">
-            <h3></h3>
-            <h4></h4>
-            <div class="form-field">
+          <div class="form-field">
               <input
                 placeholder="Your cafe Name"
                 type="text"
@@ -30,33 +24,8 @@
                 formControlName="cafesname"
                 required
               />
-            </div>
+          </div>
   
-            
-            
-  
-            <div class="form-field">
-              <input
-                placeholder="Your latitude"
-                type="number"
-                tabindex="1"
-                formControlName="latitude"
-                hidden
-              />
-            </div>
-  
-            <div class="form-field">
-              <input
-                placeholder="Your longitude"
-                type="number"
-                tabindex="1"
-                formControlName="longitude"
-                hidden
-              />
-            </div>
-  
-          </form>
-          <form  [formGroup]="form2">
           <div class="form-field">
             <input
               placeholder="Your userName"
@@ -75,38 +44,7 @@
               required
             />
           </div>
-  
-          <div class="form-field">
-            <input
-              placeholder="Your userId"
-              type="number"
-              tabindex="1"
-              formControlName="userid"
-              hidden
-            />
-          </div>
-  
-          <div class="form-field">
-            <input
-              placeholder="Your rolename"
-              type="text"
-              formControlName="rolename"
-              tabindex="2"
-              hidden
-            />
-          </div>
-  
-          <div class="form-field">
-            <input
-              placeholder="Your CafeId"
-              type="number"
-              tabindex="1"
-              formControlName="CafeId"
-              hidden
-            />
-          </div>
-         
-        </form>
+          <div id="map" ></div>
         <div class="form-field">
           <button
             name="submit"

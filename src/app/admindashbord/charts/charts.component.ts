@@ -18,7 +18,7 @@ export class ChartsComponent implements OnInit {
   getInfo(){
     this.http.get('https://localhost:44368/api/Delivery/DeliveryOnline').subscribe((res)=>{
       this.onlineRiders = res  
-      this.onlineRiders = this.onlineRiders / 100; 
+     
     })
 
     this.http.get('').subscribe((res)=>{

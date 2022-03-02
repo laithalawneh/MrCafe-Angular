@@ -45,6 +45,8 @@ import { MembersonlineComponent } from './admindashbord/membersonline/membersonl
 import { ChartsComponent } from './admindashbord/charts/charts.component';
 import { AllCafesComponent } from './admindashbord/all-cafes/all-cafes.component';
 import { RidersComponent } from './admindashbord/riders/riders.component';
+import { CreateAccountantComponent } from './admindashbord/create-accountant/create-accountant.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +79,9 @@ import { RidersComponent } from './admindashbord/riders/riders.component';
     MembersonlineComponent,
     ChartsComponent,
     AllCafesComponent,
-    RidersComponent
+    RidersComponent,
+    CreateAccountantComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -95,8 +99,8 @@ import { RidersComponent } from './admindashbord/riders/riders.component';
     FormsModule,
     ReactiveFormsModule,
     FormsModule,
-    GoogleMapsModule
-
+    GoogleMapsModule,
+    
     
 
   ],

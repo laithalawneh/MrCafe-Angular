@@ -29,45 +29,17 @@ export class CafeserviceService {
 
   insertCafe(form:any){
     const headerDict = {
-            'Content-Type': 'appliciation/json',
-            Accept: 'appliciation/json',
-          };
-          const requestOptions = {
-            headers: new HttpHeaders(headerDict),
-          };
-      
-         this.http.post('https://localhost:44368/api/Cafes/CreateCafes', form).subscribe(
-                    (res) => {
-                      this.toaster.success('', 'Send Message ');
-                    },
-                    (err) => {
-                      this.toaster.warning('server is not available');
-                    }
-                  );
-
-        return this.http.post('https://localhost:44368/api/Cafes/GetCafeIdF', form)
+      'Content-Type': 'appliciation/json',
+      Accept: 'appliciation/json',
+    };
+    const requestOptions = {
+      headers: new HttpHeaders(headerDict),
+    };
+    console.log(form);
+     return this.http.post("https://localhost:44368/api/Cafes/CreateCafes",form)
 
   }
 
-  inserLogin(form: any) {
-
-        const headerDict = {
-          'Content-Type': 'appliciation/json',
-          Accept: 'appliciation/json',
-        };
-        const requestOptions = {
-          headers: new HttpHeaders(headerDict),
-        };
-    
-        this.http.post('https://localhost:44368/api/Login/CreateLogin', form)
-          .subscribe(
-            (res) => {
-              this.toaster.success('', 'Send Message ');
-            },
-            (err) => {
-              this.toaster.warning('server is not available');
-            }
-          );
-      }
+  
 
 }
